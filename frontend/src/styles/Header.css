@@ -1,0 +1,68 @@
+header {
+  z-index: 999;
+  display: flex;
+  padding: 0 10vw;
+  margin: 0;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  width: 80vw;
+  position: fixed;
+
+  & .top-button {
+    all: unset;
+    cursor: pointer;
+  }
+
+  & .logo {
+    font-family: "Noto Sans JP";
+    padding-top: 3px;
+		font-size: 20px;
+		font-weight: 800;
+		letter-spacing: 0.1em;
+  }
+
+  & .theme-change-ui {
+		display: flex;
+		align-items: center;
+	}
+}
+
+.toggle-button {
+  margin: 20px 0.5em;
+  position: relative;
+  width: 2.3em;
+  height: 1.2em;
+  border-radius: 2em;
+  background-color: #c6c6c6;
+  border: 0.1px solid #4000cb;
+  cursor: pointer;
+  transition: background-color .4s;
+}
+
+.toggle-button:has(:checked) {
+  background-color: #414953;
+  border-color: #cb7d00;
+}
+
+.toggle-button::after {
+  position: absolute;
+  margin-top: 0.15em;
+  left: 0.1em;
+  width: 0.9em;
+  height: 0.9em;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgb(0 0 0 / 20%);
+  background-color: var(--light-theme-background-color);
+  content: '';
+  transition: left .4s;
+}
+
+.toggle-button:has(:checked)::after {
+  left: 1.3em;
+  background-color: var(--dark-theme-background-color);
+}
+
+.toggle-button input {
+  appearance: none;
+}

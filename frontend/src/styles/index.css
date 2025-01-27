@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Hina+Mincho&family=Noto+Sans+JP:wght@900&family&family=Zen+Kaku+Gothic+New&display=swap');
+
+:root {
+  --light-theme-background-color: #f3f3f3;
+  --light-theme-text-color: #3e3e3e;
+  --light-theme-sub-color: #dfdfdf;
+  --dark-theme-background-color: #1e1e20;
+  --dark-theme-text-color: #e3e3e3;
+  --dark-theme-sub-color: #3f3f42;
+  --accent-color: #02e3ba;
+
+
+  font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body{
+  margin: 0;
+  padding: 0;
+}
+
+.theme {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.theme.dark {
+  --background-color: var(--dark-theme-background-color);
+  --text-color: var(--dark-theme-text-color);
+  --sub-color: var(--dark-theme-sub-color);
+}
+
+.theme.light {
+  --background-color: var(--light-theme-background-color);
+  --text-color: var(--light-theme-text-color);
+  --sub-color: var(--light-theme-sub-color);
+}
