@@ -8,7 +8,7 @@ const Header = ({handleToggle}: any) => {
   return(
     <header>
       <div className="navigate-content">
-        <button className="top-button" onClick={() => navigate("/")}><h1 className="logo">言の葉デッキMaker</h1></button>
+        <button className="top-button" onClick={() => navigate("/")}><h1 className="logo">言の葉デッキMaker<span>β</span></h1></button>
         <button className="navigate-button" onClick={() => navigate("/decks")}>デッキ一覧</button>
         <button className="navigate-button" onClick={() => navigate("/manual")}>使い方</button>
       </div>

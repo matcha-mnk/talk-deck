@@ -42,8 +42,7 @@
   font-weight: 600;
   letter-spacing: 0.2em;
   margin: 0 auto;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
+  padding: 0 1.5em 20em 1.5em;
 
   & .logo {
     font-family: "Noto Sans JP", sans-serif;

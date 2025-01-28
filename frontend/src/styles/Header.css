@@ -23,6 +23,12 @@ header {
 		letter-spacing: 0.1em;
   }
 
+  & span {
+    background: linear-gradient(45deg, #84fab0 0%, #8fd3f4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
   & .theme-change-ui {
 		display: flex;
 		align-items: center;
