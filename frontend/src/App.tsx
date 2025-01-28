@@ -7,6 +7,7 @@ import Header from './components/Header';
 import TopPage from './pages/TopPage';
 import ManualPage from './pages/ManualPage';
 import DeckCollectionPage from './pages/DeckCollectionPage';
+import TopicRoulettePage from './pages/TopicRoulettePage';
 
 export let talkDecks:any;
 export let talkTopics:any;
@@ -35,6 +36,7 @@ function App() {
         <Header handleToggle={toggleTheme}/>
         <Routes>
           <Route path='/' element={<TopPage />}></Route>
+          <Route path='/roulette' element={<TopicRoulettePage />}></Route>
           <Route path='/decks' element={<DeckCollectionPage />}></Route>
           <Route path='/manual' element={<ManualPage />}></Route>
         </Routes>

@@ -41,6 +41,7 @@ const TopPage = () => {
           </div>
           <button className="click-button-border back-button" onClick={backViewTopic}>Back</button>
           <button className="click-button-border start-button" onClick={changeViewTopic}>Next</button>
+          <button className="click-button-border start-button" onClick={() => navigate("/roulette")}>詳細な抽選</button>
         </div>
 
         <div className="one-line information">
@@ -50,8 +51,11 @@ const TopPage = () => {
         <h2>あなただけの最強会話デッキを作ろう！</h2>
 
         <div>
-          <button className="click-button-color" onClick={() => navigate("/decks")}>
-            デッキ作成
+          <button className="click-button-color" onClick={() => navigate("/roulette")}>
+            はじめる
+          </button>
+          <button className="click-button-border" onClick={() => navigate("/decks")}>
+          デッキ作成
           </button>
           <button className="click-button-border" onClick={() => navigate("/manual")}>
             使い方
