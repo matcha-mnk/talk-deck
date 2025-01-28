@@ -11,19 +11,19 @@ import DeckCollectionPage from './pages/DeckCollectionPage';
 export let talkDecks:any;
 export let talkTopics:any;
 
+export function LoadJson(){
+  const jsonData = useLoadJson();
+  if (jsonData != undefined){
+    talkDecks = jsonData.deckData;
+    talkTopics = jsonData.topicData;
+  }
+};
+
 function App() {
   const [isDarkTheme, setDarkTheme] = useState(false);
 
   const toggleTheme = () => {
     setDarkTheme(!isDarkTheme);
-  };
-
-  function LoadJson(){
-    const jsonData = useLoadJson();
-    if (jsonData != undefined){
-      talkDecks = jsonData.deckData;
-      talkTopics = jsonData.topicData;
-    }
   };
 
   LoadJson();
