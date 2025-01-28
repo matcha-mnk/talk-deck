@@ -12,6 +12,7 @@ header {
   & .top-button {
     all: unset;
     cursor: pointer;
+    margin-right: 20px;
   }
 
   & .logo {
@@ -26,6 +27,21 @@ header {
 		display: flex;
 		align-items: center;
 	}
+
+  & .navigate-content {
+    margin-top: 20px;
+  }
+  & .navigate-button {
+    all: unset;
+    cursor: pointer;
+    margin: 0 10px;
+    position: relative;
+    transition: bottom .2s;
+    bottom: 0;
+  }
+  & .navigate-button:hover {
+    bottom: 5px;
+  }
 }
 
 .toggle-button {

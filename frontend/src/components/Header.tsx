@@ -7,7 +7,11 @@ const Header = ({handleToggle}: any) => {
   const navigate = useNavigate();
   return(
     <header>
-      <button className="top-button" onClick={() => navigate("")}><h1 className="logo">言の葉デッキMaker</h1></button>
+      <div className="navigate-content">
+        <button className="top-button" onClick={() => navigate("/")}><h1 className="logo">言の葉デッキMaker</h1></button>
+        <button className="navigate-button" onClick={() => navigate("/decks")}>デッキ一覧</button>
+        <button className="navigate-button" onClick={() => navigate("/manual")}>使い方</button>
+      </div>
       <div className="theme-change-ui">
         <SunSvg size={24} color="#f4f4f4"/>
         <label className="toggle-button">

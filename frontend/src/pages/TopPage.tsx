@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const TopPage = () => {
   const navigate = useNavigate();
-  const [viewTopic,setViewTopic] = useState('テキスト');
+  const [viewTopic,setViewTopic] = useState('親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて');
 
   const changeViewTopic = () => {
     setViewTopic('テスト');
@@ -12,13 +12,20 @@ const TopPage = () => {
 
   return(
     <div className="top-page">
-      <div>
-        <div>
-          <p className="quick-start">Quick Start</p>
-          <h1 className="quick-start">とりあえず話題を抽選してみる</h1>
+      <div className="content-name">
+        <p className="quick-start">QUICK START</p>
+        <p className="about">ABOUT</p>
+      </div>
+      <div className="top-page-content">
+        <div className="quick-start-content">
+          <div>
+            <p className="quick-start">Quick Start</p>
+            <h1 className="quick-start">とりあえず話題を抽選してみる</h1>
+          </div>
           <div className="view-topic-area">
             <h2 className="view-topic">{viewTopic}</h2>
           </div>
+          <button className="click-button-border back-button">Back</button>
           <button className="click-button-border start-button">Next</button>
         </div>
 
@@ -29,10 +36,10 @@ const TopPage = () => {
         <h2>あなただけの最強会話デッキを作ろう！</h2>
 
         <div>
-          <button className="click-button-color" onClick={() => navigate("/storage")}>
+          <button className="click-button-color" onClick={() => navigate("/decks")}>
             デッキ作成
           </button>
-          <button className="click-button-border" onClick={() => navigate("/")}>
+          <button className="click-button-border" onClick={() => navigate("/manual")}>
             使い方
           </button>
         </div>
