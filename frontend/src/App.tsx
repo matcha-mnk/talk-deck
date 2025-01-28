@@ -15,7 +15,14 @@ function App() {
     setDarkTheme(!isDarkTheme);
   };
 
-  const jsonData = useLoadJson();
+  function LoadJson(){
+    let jsonData = useLoadJson();
+    let deckJsonData = jsonData.deckData;
+    let topicJsonData = jsonData.topicData;
+    console.log(topicJsonData[1].content);
+  };
+
+  LoadJson();
 
   return (
     <Router>
@@ -28,7 +35,7 @@ function App() {
         </Routes>
       </div>
     </Router>
-  )
-}
+  );
+};
 
 export default App;
