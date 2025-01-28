@@ -1,3 +1,5 @@
+import '../styles/Manual.css'
+
 const ManualPage = () => {
   return(
     <div className="manual-page">

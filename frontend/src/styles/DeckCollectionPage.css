@@ -1,0 +1,10 @@
+.deck-collection-page {
+  padding-top: 8em;
+  height: 100vh;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+
+  & .decks {
+    display: grid;
+  }
+}

@@ -7,7 +7,7 @@ const TopPage = () => {
   const [viewTopic,setViewTopic] = useState('親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて');
 
   const changeViewTopic = () => {
-    setViewTopic('テスト');
+    setViewTopic('親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降り');
   }
 
   return(
@@ -26,7 +26,7 @@ const TopPage = () => {
             <h2 className="view-topic">{viewTopic}</h2>
           </div>
           <button className="click-button-border back-button">Back</button>
-          <button className="click-button-border start-button">Next</button>
+          <button className="click-button-border start-button" onClick={changeViewTopic}>Next</button>
         </div>
 
         <div className="one-line information">
