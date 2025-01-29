@@ -77,13 +77,13 @@ const TopicRoulettePage = () => {
         <div className="filtering">
           <div className="filtering-menu">
             <h1>絞り込み</h1>
-            <p>完全一致</p>
             <div className="filtering-toggle-ui">
+              <p>完全一致</p>
               <label className="filtering-toggle-button">
-                <input type="checkbox" onChange={ChangeIsTagExactMatch}/>
+                  <input type="checkbox" onChange={ChangeIsTagExactMatch}/>
               </label>
+              <p>部分一致</p>
             </div>
-            <p>部分一致</p>
           </div>
           <div className="tag-filter">
             {tags?.map((item:any, index:any) => (
