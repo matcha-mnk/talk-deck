@@ -48,12 +48,12 @@
   & .filtering-menu {
     display: flex;
   }
+}
 
-  & .filtering-toggle-ui {
-    display: flex;
-    align-items: center;
-    margin-left: 1em;
-  }
+& .filtering-toggle-ui {
+  display: flex;
+  align-items: center;
+  margin-left: 1em;
 }
 
 .tag-filter, .tag-content {

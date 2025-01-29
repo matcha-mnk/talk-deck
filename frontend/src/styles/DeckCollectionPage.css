@@ -1,7 +1,6 @@
 .deck-collection-page {
-  padding-top: 5em;
   height: 100vh;
-  padding: 0 1.5em 10em 1.5em;
+  padding: 5em 1.5em 100% 1.5em;
 
   & h1 {
     font-weight: 900;
@@ -32,7 +31,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(540px, 1fr));
     gap: clamp(5px, 2vw, 16px);
-    padding: clamp(12px, 4vw, 32px)
+    padding: clamp(12px, 4vw, 32px);
   }
   & .tags {
     display: flex;
@@ -91,4 +90,64 @@
   & h2, p {
     margin: 0;
   }
+}
+
+.edit-popup {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media(width < 480px){
+  .edit-popup-content {
+    width: 90%;
+  }
+}
+@media(480px <= width < 640px){
+  .edit-popup-content {
+    width: 70%;
+  }
+}
+@media(640px <= width < 960px){
+  .edit-popup-content {
+    width: 60%;
+  }
+}
+@media(960px <= width < 1280px){
+  .edit-popup-content {
+    width: 50%;
+  }
+}
+@media(1280px <= width){
+  .edit-popup-content {
+    width: 40%;
+  }
+}
+@media(height < 540px){
+  .edit-popup-content {
+    height: 50%;
+  }
+}
+@media(540px <= height < 820px){
+  .edit-popup-content {
+    height: 40%;
+  }
+}
+@media(820px <= height){
+  .edit-popup-content {
+    height: 20%;
+  }
+}
+
+.edit-popup-content {
+  background-color: var(--background-color);
+  border-radius: 8px;
 }
