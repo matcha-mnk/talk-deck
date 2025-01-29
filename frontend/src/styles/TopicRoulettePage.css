@@ -24,6 +24,10 @@
     position: relative;
   }
 
+  & .filtering {
+    margin-top: 3em;
+  }
+
   & .roulette-content {
     margin-top: 40px;
   }
@@ -40,4 +44,53 @@
     justify-content: center;
     text-align: center;
   }
+
+  & .filtering-menu {
+    display: flex;
+  }
+
+  & .filtering-toggle-ui {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.tag-filter, .tag-content {
+  display: flex;
+  align-items: center;
+}
+
+.tag-content {
+  margin: 0 .5vw;
+}
+
+.filtering-toggle-button {
+  margin: 20px 0.5em;
+  position: relative;
+  width: 30px;
+  height: 15px;
+
+  border-radius: 5px;
+  border: 0.1px solid var(--text-color);
+  cursor: pointer;
+}
+
+.filtering-toggle-button::after {
+  position: absolute;
+  margin-top: 2px;
+  width: 3px;
+  height: 12px;
+  left: 5px;
+  background-color: var(--accent-color);
+  border-radius: 20px;
+  content: '';
+  transition: left .4s ease;
+}
+
+.filtering-toggle-button:has(:checked)::after {
+  left: 22px;
+}
+
+.filtering-toggle-button input {
+  appearance: none;
 }

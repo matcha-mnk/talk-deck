@@ -5,7 +5,7 @@ import LoadJson from '../App.tsx';
 const DeckCollectionPage = () => {
   if(talkDecks == undefined || talkDecks[0] == undefined){
     LoadJson();
-  }
+  };
 
   return(
     <div className="deck-collection-page">
