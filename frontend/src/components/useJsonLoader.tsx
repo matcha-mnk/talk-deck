@@ -9,8 +9,10 @@ const useLoadJson = () => {
   const [topicData, setTopicData] = useState<TopicItem[]>([]);
   const [topickLoding, setTopicLoding] = useState(true);
 
+  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+
   useEffect(() => {
-    fetch('http://localhost:5000/../deck-data.json')
+    fetch(`${API_URL}/../deck-data.json`)
       .then((response) => response.json())
       .then((json) => {
         setDeckData(Object.values(json) as DeckItem[]);
@@ -19,7 +21,7 @@ const useLoadJson = () => {
       .catch((error) => console.error('Error fetching json:', error));
   }, []);
   useEffect(() => {
-    fetch('http://localhost:5000/../topic-data.json')
+    fetch(`${API_URL}/../topic-data.json`)
       .then((response) => response.json())
       .then((json) => {
         setTopicData(Object.values(json) as TopicItem[])
