@@ -1,5 +1,3 @@
-import React from "react";
-
 interface SunSvgProps{
   size?: number;
   color?: string;

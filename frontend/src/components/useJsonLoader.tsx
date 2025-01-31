@@ -9,7 +9,7 @@ const useLoadJson = () => {
   const [topicData, setTopicData] = useState<TopicItem[]>([]);
   const [topickLoding, setTopicLoding] = useState(true);
 
-  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+  const API_URL = process.env.VITE_API_URL || 'http://localhost:5000';
 
   useEffect(() => {
     fetch(`${API_URL}/../deck-data.json`)
