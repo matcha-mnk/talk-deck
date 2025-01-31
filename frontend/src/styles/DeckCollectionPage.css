@@ -150,4 +150,46 @@
 .edit-popup-content {
   background-color: var(--background-color);
   border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+
+  & .top-content {
+    display: block;
+    width: 100%;
+  }
+
+  & .title {
+    background-color: var(--sub-color);
+    border-radius: 8px;
+    justify-items: center;
+    width: 100%;
+  }
+
+  & .buttons {
+    margin: 0 auto;
+  }
+}
+
+.save-button, .cancel-button {
+  all: unset;
+  margin: .2em 1em;
+  border: 1px solid var(--text-color);
+  cursor: pointer;
+  padding: 0 1em;
+  border-radius: 2em;
+  background-color: var(--background-color);
+  transition: background-color .2s ease;
+}
+.save-button {
+  border-color: var(--accent-color);
+}
+.save-button:hover {
+  background-color: var(--accent-color);
+}
+.cancel-button {
+  
+}
+.cancel-button:hover {
+  background-color: var(--sub-color);
 }

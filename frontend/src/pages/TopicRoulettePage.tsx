@@ -33,7 +33,7 @@ const TopicRoulettePage = () => {
         talkTopicHistory.splice(0, 0, text);
         if(talkTopicHistory.length > 10) talkTopicHistory.splice(10, 1);
       }else{
-        setViewTopic('ヒットするものが存在しません(・ω・)');
+        setViewTopic('ヒットするものが存在しません');
       }
     };
     // 前の抽選結果表示

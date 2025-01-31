@@ -111,10 +111,14 @@ const DeckCollectionPage = () => {
       {isOpenPopup && (
         <div className="edit-popup">
           <div className='edit-popup-content'>
-            <h2>編集...</h2>
-            <p>内容</p>
-            <button onClick={ViewEditPopup}>キャンセル</button>
-            <button>保存</button>
+            <div className="top-content">
+              <div className="title"><h2>編集...</h2></div>
+              <p>内容</p>
+            </div>
+            <div className="buttons">
+              <button className="cancel-button" onClick={ViewEditPopup}>キャンセル</button>
+              <button className="save-button">保存</button>
+            </div>
           </div>
         </div>
       )}
